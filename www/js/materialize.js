@@ -6828,3 +6828,10 @@ Picker.extend( 'pickadate', DatePicker )
       }
     }; // Plugin end
 }( jQuery ));
+
+//Initializations
+ function init() {
+    $(".button-collapse").sideNav();
+    $('.collapsible').collapsible();
+
+};
