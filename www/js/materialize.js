@@ -6833,5 +6833,4 @@ Picker.extend( 'pickadate', DatePicker )
  function init() {
     $(".button-collapse").sideNav();
     $('.collapsible').collapsible();
-
 };
