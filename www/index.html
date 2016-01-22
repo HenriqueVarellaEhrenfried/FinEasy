@@ -98,17 +98,39 @@
           <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>            
           </nav>
         </div>
-     
-          
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+        <div class="porcentagem">
+            <div class="percentage_number">
+                55%
             </div>
+            <div class="bar"></div>
+            <div class="progress">
+                <div class="determinate" style="width: 55%"></div>
+            </div>            
         </div>
 
+        <table class="centered">
+        <thead>
+          <tr id="table_header">
+              <th data-field="Tipo">Tipo</th>
+              <th data-field="Valor">Valor</th>
+          </tr>
+        </thead>
 
+        <tbody>
+          <tr>
+            <td>Recebimentos</td>
+            <td>R$ 100,00</td>
+          </tr>
+          <tr>
+            <td>Gastos Fixos</td>
+            <td>R$ 20,00</td>
+          </tr>
+          <tr>
+            <td>Gastos Variáveis</td>
+            <td>R$ 35,00</td>
+          </tr>
+        </tbody>
+      </table>
 
 
         <!--Import jQuery before materialize.js-->
@@ -117,11 +139,6 @@
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script type="text/javascript">
             window.onload = init;
-        </script>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
+        </script>     
     </body>
 </html>
