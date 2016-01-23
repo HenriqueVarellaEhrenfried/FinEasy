@@ -36,6 +36,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <!--**********-->
         <title>Hello World</title>
+        <link href="stylesheets/pizza.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
+       
+
+
     </head>
     <body>
 
@@ -107,8 +111,8 @@
                 <div class="determinate" style="width: 55%"></div>
             </div>            
         </div>
-
-        <table class="centered">
+        <div class="container">
+        <table class="centered striped highlight">
         <thead>
           <tr id="table_header">
               <th data-field="Tipo">Tipo</th>
@@ -131,6 +135,17 @@
           </tr>
         </tbody>
       </table>
+      </div>
+
+
+        <ul data-pie-id="my-cool-chart">
+          <li data-value="36">Pepperoni</li>
+          <li data-value="14">Sausage</li>
+          <li data-value="8">Cheese</li>
+          <li data-value="11">Mushrooms</li>
+          <li data-value="7">Chicken</li>
+          <li data-value="24">Other</li>
+        </ul>
 
 
         <!--Import jQuery before materialize.js-->
@@ -139,6 +154,10 @@
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script type="text/javascript">
             window.onload = init;
-        </script>     
+        </script>  
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/vendor/snap.svg.js"></script>
+        <script src="js/jquery.pizza.js"></script>   
     </body>
 </html>

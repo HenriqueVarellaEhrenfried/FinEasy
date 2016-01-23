@@ -19,7 +19,6 @@
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
-
 /* Portrait layout (default) */
 .app {
     background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
@@ -90,17 +89,18 @@ h1 {
 }
 .percentage_number{
   font-size: 60px;
+  /*color: #2F9DF4;*/
 }
 .progress{
-    position: fixed !important;
+    position: absolute !important;
     height: 20px !important;
     width: 50% !important;
     background-color: #ECDBAC !important;
     border-radius: 2px !important;
     margin: 0.5rem 0 1rem 0 !important;
     overflow: hidden !important;
-    top:83px;
-    left:130px;
+    top:130px;
+    left:140px;
 }
 
 .progress .determinate {
@@ -113,11 +113,18 @@ h1 {
     transition: width .3s linear;
 }
 .porcentagem{
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-bottom: 50px;
     display: flex;
 }
 nav{
     background-color: #E4A800 !important;
 }
+
 #table_header{
     background-color: #E4A800 !important;
+}
+table.highlight > tbody > tr:hover{
+   background-color: #ECDBAC !important; 
 }

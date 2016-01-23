@@ -6833,4 +6833,7 @@ Picker.extend( 'pickadate', DatePicker )
  function init() {
     $(".button-collapse").sideNav();
     $('.collapsible').collapsible();
+    Pizza.init('#my-cool-chart', {
+  data: [23, 43, 17, 7, 11]
+});
 };
