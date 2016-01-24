@@ -101,6 +101,7 @@ h1 {
     overflow: hidden !important;
     top:130px;
     left:140px;
+    z-index: 1;
 }
 
 .progress .determinate {
@@ -115,11 +116,13 @@ h1 {
 .porcentagem{
     margin-top: 40px;
     margin-left: 20px;
-    margin-bottom: 50px;
     display: flex;
+    position: absolute;
+    z-index: 2; /* número máximo é 9999 */
 }
 nav{
     background-color: #E4A800 !important;
+
 }
 
 #table_header{
@@ -128,8 +131,14 @@ nav{
 table.highlight > tbody > tr:hover{
    background-color: #ECDBAC !important; 
 }
-
 #donutchart {
   width: 100%; 
-  height: 600px;    
+  height: 400px;
+  margin-top: 45px;
+  display: flex;
+}
+.container {
+    position:relative;
+    z-index: 3;
+    top: -50px;
 }

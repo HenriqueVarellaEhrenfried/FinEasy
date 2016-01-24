@@ -6847,10 +6847,9 @@ Picker.extend( 'pickadate', DatePicker )
 	    ['Cartões',  10.00]
 	  ]);
     var options = {
-     title: 'Meu Resumo',
      is3D: true,
-     legend: {position: 'bottom', textStyle: {color: 'blue', fontSize: 16}},
-     pieSliceText: 'label',
+     legend: 'none',
+     pieSliceText: 'percentage',
      slices: [{color: 'grey'}, {color: '#FF8C00'}, {color: '#8B0000'}, {color: '#006400'}]
     };
     var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
