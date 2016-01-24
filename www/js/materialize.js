@@ -6832,10 +6832,33 @@ Picker.extend( 'pickadate', DatePicker )
 //Initializations
  function init() {
     $(".button-collapse").sideNav();
-    $('.collapsible').collapsible();
-    Pizza.init('#my-cool-chart', {
-  data: [23, 43, 17, 7, 11]
-});
+    $('.collapsible').collapsible();   
+
+
+
+    google.charts.load("current", {packages:["corechart"]});
+	google.charts.setOnLoadCallback(drawChart);
+	function drawChart() {
+	  var data = google.visualization.arrayToDataTable([
+	    ['Tipo', 'Valor'],
+	    ['Sobra',  45.00],
+	    ['Gastos Fixos', 20.00],
+	    ['Gastos Variáveis',  35.00],
+	    ['Cartões',  10.00]
+	  ]);
+    var options = {
+     title: 'Meu Resumo',
+     is3D: true,
+     legend: {position: 'bottom', textStyle: {color: 'blue', fontSize: 16}},
+     pieSliceText: 'label',
+     slices: [{color: 'grey'}, {color: '#FF8C00'}, {color: '#8B0000'}, {color: '#006400'}]
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+   chart.draw(data, options);
+ } 
+    $(window).resize(function(){
+  drawChart();
+  });
 };
 
-http://zurb.com/playground/pizza-pie-charts
+// http://zurb.com/playground/pizza-pie-charts

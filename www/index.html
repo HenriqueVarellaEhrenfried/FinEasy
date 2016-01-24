@@ -36,8 +36,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <!--**********-->
         <title>Hello World</title>
-        <link href="stylesheets/pizza.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
-       
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 
     </head>
@@ -111,6 +110,10 @@
                 <div class="determinate" style="width: 55%"></div>
             </div>            
         </div>
+
+
+        <div id="donutchart"></div>
+
         <div class="container">
         <table class="centered striped highlight">
         <thead>
@@ -137,17 +140,6 @@
       </table>
       </div>
 
-
-        <ul data-pie-id="my-cool-chart">
-          <li data-value="36">Pepperoni</li>
-          <li data-value="14">Sausage</li>
-          <li data-value="8">Cheese</li>
-          <li data-value="11">Mushrooms</li>
-          <li data-value="7">Chicken</li>
-          <li data-value="24">Other</li>
-        </ul>
-
-
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.js"></script>
@@ -156,8 +148,6 @@
             window.onload = init;
         </script>  
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="js/vendor/snap.svg.js"></script>
-        <script src="js/jquery.pizza.js"></script>   
+
     </body>
 </html>

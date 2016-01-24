@@ -128,3 +128,8 @@ nav{
 table.highlight > tbody > tr:hover{
    background-color: #ECDBAC !important; 
 }
+
+#donutchart {
+  width: 100%; 
+  height: 600px;    
+}
