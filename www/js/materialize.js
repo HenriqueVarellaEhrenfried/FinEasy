@@ -6848,7 +6848,7 @@ Picker.extend( 'pickadate', DatePicker )
 	  ]);
     var options = {
      is3D: true,
-     legend: 'none',
+     legend: 'bottom',
      pieSliceText: 'percentage',
      slices: [{color: 'grey'}, {color: '#FF8C00'}, {color: '#8B0000'}, {color: '#006400'}]
     };
@@ -6856,8 +6856,9 @@ Picker.extend( 'pickadate', DatePicker )
    chart.draw(data, options);
  } 
     $(window).resize(function(){
-  drawChart();
+  		drawChart();
   });
+
 };
 
 // http://zurb.com/playground/pizza-pie-charts

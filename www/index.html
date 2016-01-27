@@ -38,10 +38,9 @@
         <title>Hello World</title>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-
     </head>
     <body>
-
+        <!--INÍCIO DO MENU-->
         <div class="menu">
           <nav id="menubar">
             <ul id="slide-out" class="side-nav">
@@ -101,47 +100,58 @@
           <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>            
           </nav>
         </div>
-        <div class="progress">
-                <div class="determinate" style="width: 55%"></div>
+        <!--FIM DO MENU-->
+        <div class="container" id="summary">
+        <div class="col s1 m6">
+          <div class="card" id="cardResumo">
+            <div class="card-content">
+              <span class="card-title">Resumo</span>
+              <div class="porcentagem">
+                    65% da renda foi utilizada
+                </div>
+              <div class="progress">
+                  <div class="determinate" style="width: 70%"></div>
+              </div>
+              <div id="donutchart"></div>
             </div>
-        <div class="porcentagem">
-            <div class="percentage_number">
-                55%
-            </div>
-            <div class="bar"></div>            
+          </div>
         </div>
-
+      </div>
 
         <div id="donutchart"></div>
 
         <div class="container">
-        <table class="centered striped highlight">
-        <thead>
-          <tr id="table_header">
-              <th data-field="Tipo">Tipo</th>
-              <th data-field="Valor">Valor</th>
-          </tr>
-        </thead>
+            <div class="col s1 m6">
+              <div class="card" id="tableResumo">
+                <table class="centered striped highlight">
+                <thead>
+                  <tr id="table_header">
+                      <th data-field="Tipo">Tipo</th>
+                      <th data-field="Valor">Valor</th>
+                  </tr>
+                </thead>
 
-        <tbody>
-          <tr>
-            <td>Recebimentos</td>
-            <td>R$ 100,00</td>
-          </tr>
-          <tr>
-            <td>Gastos Fixos</td>
-            <td>R$ 20,00</td>
-          </tr>
-          <tr>
-            <td>Gastos Variáveis</td>
-            <td>R$ 35,00</td>
-          </tr>
-          <tr>
-            <td>Cartões</td>
-            <td>R$ 10,00</td>
-          </tr>
-        </tbody>
-      </table>
+                <tbody>
+                  <tr>
+                    <td>Recebimentos</td>
+                    <td>R$ 100,00</td>
+                  </tr>
+                  <tr>
+                    <td>Gastos Fixos</td>
+                    <td>R$ 20,00</td>
+                  </tr>
+                  <tr>
+                    <td>Gastos Variáveis</td>
+                    <td>R$ 35,00</td>
+                  </tr>
+                  <tr>
+                    <td>Cartões</td>
+                    <td>R$ 10,00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
       </div>
 
         <!--Import jQuery before materialize.js-->
