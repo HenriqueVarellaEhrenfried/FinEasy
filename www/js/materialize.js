@@ -6841,16 +6841,18 @@ Picker.extend( 'pickadate', DatePicker )
 	function drawChart() {
 	  var data = google.visualization.arrayToDataTable([
 	    ['Tipo', 'Valor'],
-	    ['Sobra',  45.00],
+	    ['Saldo',  45.00],
 	    ['Gastos Fixos', 20.00],
-	    ['Gastos Variáveis',  35.00],
-	    ['Cartões',  10.00]
+	    ['Gastos Extras',  35.00],
+	    ['Gastos com Cartão',  10.00],
+	    ['Parcelados', 15.00]
 	  ]);
     var options = {
-     is3D: true,
+     is3D: false,
+     pieHole: 0.5,
      legend: 'bottom',
      pieSliceText: 'percentage',
-     slices: [{color: 'grey'}, {color: '#FF8C00'}, {color: '#8B0000'}, {color: '#006400'}]
+     slices: [{color: 'grey'}, {color: '#64CD00'}, {color: '#E4A800'}, {color: '#C90044'},{color: '#008989'}]
     };
     var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
    chart.draw(data, options);
