@@ -6833,15 +6833,21 @@ Picker.extend( 'pickadate', DatePicker )
  function init() {
     $(".button-collapse").sideNav();
     $('.collapsible').collapsible();   
-
-
+    $('.modal-trigger').leanModal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      in_duration: 300, // Transition in duration
+      out_duration: 200, // Transition out duration
+    });
+    $('#modal1').openModal();
+	$('#modal1').closeModal();
 
     google.charts.load("current", {packages:["corechart"]});
 	google.charts.setOnLoadCallback(drawChart);
 	function drawChart() {
 	  var data = google.visualization.arrayToDataTable([
-	    ['Tipo', 'Valor'],
-	    ['Saldo',  45.00],
+	    ['Tipo', 'Valor em R$'],
+	    ['Saldo',  20.00],
 	    ['Gastos Fixos', 20.00],
 	    ['Gastos Extras',  35.00],
 	    ['Gastos com Cartão',  10.00],
@@ -6850,9 +6856,10 @@ Picker.extend( 'pickadate', DatePicker )
     var options = {
      is3D: false,
      pieHole: 0.5,
-     legend: 'bottom',
+     legend: 'none',
      pieSliceText: 'percentage',
-     slices: [{color: 'grey'}, {color: '#64CD00'}, {color: '#E4A800'}, {color: '#C90044'},{color: '#008989'}]
+     slices: [{color: 'grey'}, {color: '#64CD00'}, {color: '#E4A800'}, {color: '#C90044'},{color: '#008989'}],
+     chartArea:{width:'100%',height:'89%'}
     };
     var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
    chart.draw(data, options);
@@ -6862,5 +6869,3 @@ Picker.extend( 'pickadate', DatePicker )
   });
 
 };
-
-// http://zurb.com/playground/pizza-pie-charts

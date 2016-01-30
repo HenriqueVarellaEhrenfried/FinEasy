@@ -35,7 +35,7 @@
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <!--**********-->
-        <title>Hello World</title>
+        <title>FinEasy</title>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     </head>
@@ -45,119 +45,103 @@
           <nav id="menubar">
             <ul id="slide-out" class="side-nav">
             <li>
-            <a class="huge material-icons" id="responsiveHome" href="#!">home</a>
+                <a class="huge material-icons" id="responsiveHome" href="#!">home</a>
             </li>
-            <li class="no-padding">
-              <ul class="collapsible collapsible-accordion">
-                <li>
-                  <a class="collapsible-header">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li><a href="#!">First</a></li>
-                      <li><a href="#!">Second</a></li>
-                      <li><a href="#!">Third</a></li>
-                      <li><a href="#!">Fourth</a></li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </li>
-             <li class="no-padding">
-              <ul class="collapsible collapsible-accordion">
-                <li>
-                  <a class="collapsible-header">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li><a href="#!">First</a></li>
-                      <li><a href="#!">Second</a></li>
-                      <li><a href="#!">Third</a></li>
-                      <li><a href="#!">Fourth</a></li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
+            <li>
+                <a href="#!">Detalhes</a>
             </li>
           </ul>
           <ul class="left hide-on-med-and-down">
             <li>              
               <a class="huge material-icons white-text" href="#!" id="webHomeNonResponsive">home</a>
+            </li>           
+            <li>
+                <a href="#!">Detalhes</a>
             </li>
-            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
-            <ul id='dropdown1' class='dropdown-content'>
-              <li><a href="#!">First 1</a></li>
-              <li><a href="#!">Second 1</a></li>
-              <li><a href="#!">Third 1</a></li>
-              <li><a href="#!">Fourth 1</a></li>
-            </ul>
-            <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Dropdown<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
-            <ul id='dropdown2' class='dropdown-content'>
-              <li><a href="#!">First 2</a></li>
-              <li><a href="#!">Second 2</a></li>
-              <li><a href="#!">Third 2</a></li>
-              <li><a href="#!">Fourth 2</a></li>
-            </ul>
           </ul>
           <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>            
           </nav>
         </div>
         <!--FIM DO MENU-->
-        <div class="container" id="summary">
-        <div class="col s1 m6">
-          <div class="card" id="cardResumo">
-            <div class="card-content">
-              <span class="card-title">Resumo</span>
-              <div class="porcentagem">
-                    80% da renda foi utilizada
+        <div class="row">
+            <div class="container" id="summary">
+            <div class="col s12 m12 l12">
+              <div class="card" id="cardResumo">
+                <div class="card-content">
+                  <span class="card-title">Resumo</span>
+                  <div class="porcentagem">
+                        80% da renda foi utilizada
+                    </div>
+                  <div class="progress">
+                      <div class="determinate" style="width: 80%"></div>
+                  </div>
+                  <div id="donutchart"></div>
+                  <a class="btn-floating btn-small waves-effect waves-light red modal-trigger" href="#modal1"><i class="material-icons">add</i></a>
                 </div>
-              <div class="progress">
-                  <div class="determinate" style="width: 80%"></div>
               </div>
-              <div id="donutchart"></div>
+            </div>
+          </div>
+            <div class="container">
+                <div class="col s12 m12 l12">
+                  <div class="card" id="tableResumo">
+                    <table class="centered striped highlight">
+                    <thead>
+                      <tr id="table_header">
+                          <th data-field="Tipo">Tipo</th>
+                          <th data-field="Valor">Valor</th>
+                          <th data-field="Porcentagem">Porcentagem</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>Recebimentos</td>
+                        <td>R$ 100,00</td>
+                        <td>100%</td>
+                      </tr>
+                      <tr>
+                        <td>Gastos Fixos</td>
+                        <td>R$ 20,00</td>
+                        <td>20%</td>
+                      </tr>
+                      <tr>
+                        <td>Gastos Extras</td>
+                        <td>R$ 35,00</td>
+                        <td>35%</td>
+                      </tr>
+                      <tr>
+                        <td>Gastos com Cartão</td>
+                        <td>R$ 10,00</td>
+                        <td>10%</td>
+                      </tr>
+                      <tr>
+                        <td>Parcelados</td>
+                        <td>R$ 15,00</td>
+                        <td>15%</td>
+                      </tr>
+                      <tr class="final">
+                        <td>Saldo Final</td>
+                        <td>R$ 20,00</td>
+                        <td>20%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
             </div>
           </div>
         </div>
-      </div>
-
-        <div id="donutchart"></div>
-
-        <div class="container">
-            <div class="col s1 m6">
-              <div class="card" id="tableResumo">
-                <table class="centered striped highlight">
-                <thead>
-                  <tr id="table_header">
-                      <th data-field="Tipo">Tipo</th>
-                      <th data-field="Valor">Valor</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <td>Recebimentos</td>
-                    <td>R$ 100,00</td>
-                  </tr>
-                  <tr>
-                    <td>Gastos Fixos</td>
-                    <td>R$ 20,00</td>
-                  </tr>
-                  <tr>
-                    <td>Gastos Extras</td>
-                    <td>R$ 35,00</td>
-                  </tr>
-                  <tr>
-                    <td>Gastos com Cartão</td>
-                    <td>R$ 10,00</td>
-                  </tr>
-                  <tr>
-                    <td>Parcelados</td>
-                    <td>R$ 15,00</td>
-                  </tr>
-                </tbody>
-              </table>
+        <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+              <h4>Modal Header</h4>
+              <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right">Cadastrar</a>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat left">Cancelar</a>
             </div>
         </div>
-      </div>
-
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.js"></script>
