@@ -138,3 +138,6 @@ table.highlight > tbody > tr:hover{
     background-color: #78909c;
     color: white;
 }
+.picker__date-display {
+    display: none;
+}
