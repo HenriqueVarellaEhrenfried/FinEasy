@@ -76,7 +76,7 @@
                       <div class="determinate" style="width: 80%"></div>
                   </div>
                   <div id="donutchart"></div>
-                  <a class="btn-floating btn-small waves-effect waves-light red modal-trigger" href="#modal1"><i class="material-icons">add</i></a>
+                  <a class="btn-floating btn-small waves-effect waves-light red modal-trigger" href="#modal1"><i class="material-icons">zoom_out_map</i></a>
                 </div>
               </div>
             </div>
@@ -92,7 +92,6 @@
                           <th data-field="Porcentagem">Porcentagem</th>
                       </tr>
                     </thead>
-
                     <tbody>
                       <tr>
                         <td>Recebimentos</td>
@@ -130,10 +129,330 @@
             </div>
           </div>
         </div>
-        <div id="modal1" class="modal modal-fixed-footer">
+
+        <!-- Acordion -->
+        <div class="container" id="collapsible-item">
+          <div class="col s12 m12 l12">
+            <ul class="collapsible popout" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header">Recebimentos</div>
+                <div class="collapsible-body">
+                  <table class="centered striped highlight">
+                    <thead>
+                      <tr id="table_header">
+                          <th data-field="Tipo">Descrição</th>
+                          <th data-field="Valor">Valor</th>
+                          <th data-field="Ações">Ações</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Salário</td>
+                        <td>R$ 80,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Aplicação - CDB</td>
+                        <td>R$ 5,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Aluguel Apartamento 52</td>
+                        <td>R$ 10,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Devolução Empréstimo João</td>
+                        <td>R$ 5,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Total</td>
+                        <td>R$ 100,00</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header">Gastos Fixos</div>
+                <div class="collapsible-body"><table class="centered striped highlight">
+                    <thead>
+                      <tr id="table_header">
+                          <th data-field="Tipo">Descrição</th>
+                          <th data-field="Valor">Valor</th>
+                          <th data-field="Ações">Ações</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Salário</td>
+                        <td>R$ 80,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Aplicação - CDB</td>
+                        <td>R$ 5,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Aluguel Apartamento 52</td>
+                        <td>R$ 10,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Devolução Empréstimo João</td>
+                        <td>R$ 5,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Total</td>
+                        <td>R$ 100,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+              </li>
+              <li>
+                <div class="collapsible-header">Gastos Extras</div>
+                <div class="collapsible-body">
+                  <table class="centered striped highlight">
+                    <thead>
+                      <tr id="table_header">
+                          <th data-field="Tipo">Descrição</th>
+                          <th data-field="Valor">Valor</th>
+                          <th data-field="Ações">Ações</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Salário</td>
+                        <td>R$ 80,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Aplicação - CDB</td>
+                        <td>R$ 5,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Aluguel Apartamento 52</td>
+                        <td>R$ 10,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Devolução Empréstimo João</td>
+                        <td>R$ 5,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Total</td>
+                        <td>R$ 100,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header">Gastos com Cartão</div>
+                <div class="collapsible-body">
+                  <table class="centered striped highlight">
+                    <thead>
+                      <tr id="table_header">
+                          <th data-field="Tipo">Descrição</th>
+                          <th data-field="Valor">Valor</th>
+                          <th data-field="Ações">Ações</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Salário</td>
+                        <td>R$ 80,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Aplicação - CDB</td>
+                        <td>R$ 5,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Aluguel Apartamento 52</td>
+                        <td>R$ 10,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Devolução Empréstimo João</td>
+                        <td>R$ 5,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Total</td>
+                        <td>R$ 100,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header">Parcelados</div>
+                <div class="collapsible-body">
+                  <table class="centered striped highlight">
+                    <thead>
+                      <tr id="table_header">
+                          <th data-field="Tipo">Descrição</th>
+                          <th data-field="Valor">Valor</th>
+                          <th data-field="Ações">Ações</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Salário</td>
+                        <td>R$ 80,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Aplicação - CDB</td>
+                        <td>R$ 5,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Aluguel Apartamento 52</td>
+                        <td>R$ 10,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Devolução Empréstimo João</td>
+                        <td>R$ 5,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Total</td>
+                        <td>R$ 100,00</td>
+                        <td>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
+                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+
+
+
+        <!-- modais -->
+        <div id="modal1" class="modal modal-fixed-footer large">
             <div class="modal-content">
               <h4>Modal Header</h4>
-              <p>A bunch of text</p>
+              <div class="row">
+                <div class="input-field col s12 m12 l12">
+                  <label for="textarea1">Descrição</label>
+                  <div class="row"></div>
+                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                  <input type="date" class="datepicker" placeholder="Data da compra">
+                </div>
+              </div>
             </div>
             <div class="modal-footer">
               <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right">Cadastrar</a>

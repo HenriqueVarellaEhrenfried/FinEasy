@@ -6832,6 +6832,7 @@ Picker.extend( 'pickadate', DatePicker )
 //Initializations
  function init() {
     $(".button-collapse").sideNav();
+    $('.tooltipped').tooltip({delay: 50});
     $('.collapsible').collapsible();   
     $('.modal-trigger').leanModal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
@@ -6841,6 +6842,8 @@ Picker.extend( 'pickadate', DatePicker )
     });
     $('#modal1').openModal();
 	$('#modal1').closeModal();
+	$('input#input_text, textarea#textarea1').characterCounter();
+
 
     google.charts.load("current", {packages:["corechart"]});
 	google.charts.setOnLoadCallback(drawChart);
@@ -6867,5 +6870,71 @@ Picker.extend( 'pickadate', DatePicker )
     $(window).resize(function(){
   		drawChart();
   });
+  $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year
+    // Strings and translations
+	monthsFull: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+	monthsShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+	weekdaysFull: ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'],
+	weekdaysShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+	showMonthsShort: undefined,
+	showWeekdaysFull: undefined,
 
+	// Buttons
+	today: 'Hoje',
+	clear: 'Limpar',
+	close: 'Fechar',
+
+	// Accessibility labels
+	labelMonthNext: 'Próximo Mês',
+	labelMonthPrev: 'Mês Anterior',
+	labelMonthSelect: 'Selecione um Mês',
+	labelYearSelect: 'Selecione um Ano',
+
+	// Formats
+	format: 'dd/mm/yyyy',
+	formatSubmit: undefined,
+	hiddenPrefix: undefined,
+	hiddenSuffix: '_submit',
+	hiddenName: undefined,
+    onRender: function() {
+    	$( ".picker__weekday").each(function(index){
+	        translate_weekday(this,index);
+	        });
+	},
+    onStart: function() {
+       $( ".picker__weekday").each(function(index){
+          translate_weekday(this,index);
+       });
+    },
+  });
 };
+function translate_weekday(div, index) {
+   switch(index%7) {
+     case 0:
+       day = "DOM"
+       break;
+     case 1:
+       day = "SEG"
+       break;
+     case 2:
+       day = "TER"
+       break;
+     case 3:
+       day = "QUA"
+       break;
+     case 4:
+       day = "QUI"
+       break;
+     case 5:
+       day = "SEX"
+       break;
+     case 6:
+       day = "SAB"
+       break;
+     default:
+       // error
+   }
+   $(div).html(day)
+ }

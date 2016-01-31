@@ -2187,7 +2187,7 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
+ * 2. Prevent iOS text size adjust after orientation change without disabling
  *    user zoom.
  */
 html {
@@ -11263,4 +11263,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   text-align: center;
   margin-top: 15px;
 
+}
+
+input:focus{
+    border-bottom: 1px solid #E4A800 !important;
+    box-shadow: 0 1px 0 0 #E4A800 !important;
+}
+input[type=text]:focus:not([readonly])+label{
+  color: #E4A800 !important;
 }
