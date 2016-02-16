@@ -63,6 +63,8 @@
           </nav>
         </div>
         <!--FIM DO MENU-->
+
+        <!-- RESUMO -->
         <div class="row">
             <div class="container" id="summary">
             <div class="col s12 m12 l12">
@@ -84,12 +86,13 @@
             <div class="container">
                 <div class="col s12 m12 l12">
                   <div class="card" id="tableResumo">
-                    <table class="centered striped highlight">
+                    <table class="centered striped highlight responsive-table">
                     <thead>
                       <tr id="table_header">
                           <th data-field="Tipo">Tipo</th>
                           <th data-field="Valor">Valor</th>
                           <th data-field="Porcentagem">Porcentagem</th>
+                          <th data-field="Actions">Ações</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -97,31 +100,42 @@
                         <td>Recebimentos</td>
                         <td>R$ 100,00</td>
                         <td>100%</td>
+                        <td><i class="waves-effect material-icons tooltipped modal-trigger"  href="#modalRecebe" data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                        <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Detalhes">info</i></td>
                       </tr>
                       <tr>
                         <td>Gastos Fixos</td>
                         <td>R$ 20,00</td>
                         <td>20%</td>
+                        <td><i class="waves-effect material-icons tooltipped modal-trigger"  href="#modalFixo" data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                        <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Detalhes">info</i></td>
                       </tr>
                       <tr>
                         <td>Gastos Extras</td>
                         <td>R$ 35,00</td>
                         <td>35%</td>
+                        <td><i class="waves-effect material-icons tooltipped modal-trigger"  href="#modalExtra" data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                        <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Detalhes">info</i></td>
                       </tr>
                       <tr>
                         <td>Gastos com Cartão</td>
                         <td>R$ 10,00</td>
                         <td>10%</td>
+                        <td><i class="waves-effect material-icons tooltipped modal-trigger"  href="#modalCartao" data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                        <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Detalhes">info</i></td>
                       </tr>
                       <tr>
                         <td>Parcelados</td>
                         <td>R$ 15,00</td>
                         <td>15%</td>
+                        <td><i class="waves-effect material-icons tooltipped modal-trigger"  href="#modalParcelado" data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
+                        <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Detalhes">info</i></td>
                       </tr>
                       <tr class="final">
                         <td>Saldo Final</td>
                         <td>R$ 20,00</td>
                         <td>20%</td>
+                        <td> </td>
                       </tr>
                     </tbody>
                   </table>
@@ -129,8 +143,8 @@
             </div>
           </div>
         </div>
-
-        <!-- Acordion -->
+        <!-- FIM DO RESUMO -->
+        <!-- ACORDION -->
         <div class="container" id="collapsible-item">
           <div class="col s12 m12 l12">
             <ul class="collapsible popout" data-collapsible="accordion">
@@ -150,7 +164,6 @@
                         <td>Salário</td>
                         <td>R$ 80,00</td>
                         <td>
-                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
                           <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
                           <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
                         </td>
@@ -159,7 +172,6 @@
                         <td>Aplicação - CDB</td>
                         <td>R$ 5,00</td>
                         <td>
-                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
                           <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
                           <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
                         </td>
@@ -168,7 +180,6 @@
                         <td>Aluguel Apartamento 52</td>
                         <td>R$ 10,00</td>
                         <td>
-                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
                           <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
                           <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
                         </td>
@@ -177,7 +188,6 @@
                         <td>Devolução Empréstimo João</td>
                         <td>R$ 5,00</td>
                         <td>
-                          <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Adicionar">add_circle</i>
                           <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>
                           <i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>
                         </td>
@@ -437,11 +447,13 @@
             </ul>
           </div>
         </div>
-  
+        <!-- FIM DO ACORDION -->
 
 
 
-        <!-- modais -->
+        <!-- MODAIS -->
+
+        <!-- modal gráfico -->
         <div id="modal1" class="modal modal-fixed-footer large">
             <div class="modal-content">
               <h4>Modal Header</h4>
@@ -455,12 +467,99 @@
               </div>
             </div>
             <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right">Cadastrar</a>
-            </div>
-            <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat left">Cancelar</a>
+              <a href="#!" class="modal-action modal-close waves-effect btn-flat right">Fechar</a>
             </div>
         </div>
+        <!-- fim modal grafico -->
+        <!-- modal adicionar item -->
+        <div id="modalParcelado" class="modal modal-fixed-footer large">
+            <div class="modal-content center">
+              <h4>Adicionar Parcelado</h4>
+              <div class="row">
+                <div class="input-field col s12 m12 l12">
+                  <div class="row"></div>
+                  <textarea id="textarea1" class="materialize-textarea" placeholder="Descrição"></textarea>
+                  <div class="row"></div>
+                  <input type="date" class="datepicker" placeholder="Data do Vencimento">
+                  <div class="row"></div>
+                  <input placeholder="Número de Parcelas" id="first_name" type="number" class="parcelas">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect btn-flat right">Fechar</a>
+            </div>
+        </div>
+
+        <div id="modalCartao" class="modal modal-fixed-footer large">
+            <div class="modal-content center">
+              <h4>Adicionar Gasto com Cartão</h4>
+              <div class="row">
+                <div class="input-field col s12 m12 l12">
+                  <div class="row"></div>
+                  <textarea id="textarea1" class="materialize-textarea" placeholder="Descrição"></textarea>
+                  <div class="row"></div>
+                  <input type="date" class="datepicker" placeholder="Data do Vencimento">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect btn-flat right">Fechar</a>
+            </div>
+        </div>
+
+        <div id="modalExtra" class="modal modal-fixed-footer large">
+            <div class="modal-content center">
+              <h4>Adicionar Gasto Extra</h4>
+              <div class="row">
+                <div class="input-field col s12 m12 l12">
+                  <div class="row"></div>
+                  <textarea id="textarea1" class="materialize-textarea" placeholder="Descrição"></textarea>
+                  <div class="row"></div>
+                  <input type="date" class="datepicker" placeholder="Data do Vencimento">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect btn-flat right">Fechar</a>
+            </div>
+        </div>
+
+        <div id="modalFixo" class="modal modal-fixed-footer large">
+            <div class="modal-content center">
+              <h4>Adicionar Gasto Fixo</h4>
+              <div class="row">
+                <div class="input-field col s12 m12 l12">
+                  <div class="row"></div>
+                  <textarea id="textarea1" class="materialize-textarea" placeholder="Descrição"></textarea>
+                  <div class="row"></div>
+                  <input type="date" class="datepicker" placeholder="Data do Vencimento">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect btn-flat right">Fechar</a>
+            </div>
+        </div>
+
+        <div id="modalRecebe" class="modal modal-fixed-footer large">
+            <div class="modal-content center">
+              <h4>Adicionar Recebimento</h4>
+              <div class="row">
+                <div class="input-field col s12 m12 l12">
+                  <div class="row"></div>
+                  <textarea id="textarea1" class="materialize-textarea" placeholder="Descrição"></textarea>
+                  <div class="row"></div>
+                  <input type="date" class="datepicker" placeholder="Data do Recebimento">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect btn-flat right">Fechar</a>
+            </div>
+        </div>
+        <!-- fim modal adicionar item -->
+        <!-- FIM DOS MODAIS -->
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.js"></script>
