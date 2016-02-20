@@ -6938,11 +6938,41 @@ function translate_weekday(div, index) {
    }
    $(div).html(day)
  }
- function addProfit(){
+ function removeTableLine(number, table){ //Remove linha da tabela table de número number. O número começa da linha 0
+	$(table).each(function(){
+	 	var removeLine = 'tbody tr:eq('+number+')';
+	 	var removeLine1 = 'tr:eq('+number+');'
+	    if($('tbody', this).length > 0){
+	        $(removeLine, this).remove();
+	    }else {
+	        $(removeLine1, this).remove();
+	    }
+	});
+}
+function removeLastTableLine(table){
+	$(table).each(function(){
+	    if($('tbody', this).length > 0){
+	        $('tbody tr:last', this).remove();
+	    }else {
+	        $('tr:last', this).remove();
+	    }
+	});
+}
+function addRowToEnd(table, content){
+	table = table + ' > tbody:last-child';
+	$(table).append(content);
+} 
+function iconsReturn(){
+	var removeBTN = '<i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Remover">delete</i>';
+	var editBTN ='<i class="waves-effect material-icons tooltipped"  data-position="top" data-delay="50" data-tooltip="Editar">edit</i>';
+	return removeBTN+editBTN;
+}
+function addItem(table){
  	description = document.getElementById('textareaProfit').innerHTML;
  	value = document.getElementById('valorProfit').innerHTML;
  	alert(description);
  	alert(value);
- 	$('#profitTable > tbody:last-child').append("<tr><td>"+description+"</td><td>"+value+"</td><td><i class='waves-effect material-icons tooltipped'  data-position='top' data-delay='50' data-tooltip='Adicionar'>add_circle</i><i class='waves-effect material-icons tooltipped'  data-position='top' data-delay='50' data-tooltip='Remover'>delete</i><i class='waves-effect material-icons tooltipped'  data-position='top' data-delay='50' data-tooltip='Editar'>edit</i></td></tr>");
-
+ 	removeLastTableLine(table);
+ 	var content = "<tr><td>"+description+"</td><td>"+value+"</td><td>"+iconsReturn()+"</td></tr>"
+ 	addRowToEnd(table, content);
  }
