@@ -6938,3 +6938,11 @@ function translate_weekday(div, index) {
    }
    $(div).html(day)
  }
+ function addProfit(){
+ 	description = document.getElementById('textareaProfit').innerHTML;
+ 	value = document.getElementById('valorProfit').innerHTML;
+ 	alert(description);
+ 	alert(value);
+ 	$('#profitTable > tbody:last-child').append("<tr><td>"+description+"</td><td>"+value+"</td><td><i class='waves-effect material-icons tooltipped'  data-position='top' data-delay='50' data-tooltip='Adicionar'>add_circle</i><i class='waves-effect material-icons tooltipped'  data-position='top' data-delay='50' data-tooltip='Remover'>delete</i><i class='waves-effect material-icons tooltipped'  data-position='top' data-delay='50' data-tooltip='Editar'>edit</i></td></tr>");
+
+ }

@@ -151,7 +151,7 @@
               <li>
                 <div class="collapsible-header">Recebimentos</div>
                 <div class="collapsible-body">
-                  <table class="centered striped highlight">
+                  <table class="centered striped highlight" id="profitTable">
                     <thead>
                       <tr id="table_header">
                           <th data-field="Tipo">Descrição</th>
@@ -548,14 +548,15 @@
               <div class="row">
                 <div class="input-field col s12 m12 l12">
                   <div class="row"></div>
-                  <textarea id="textarea1" class="materialize-textarea" placeholder="Descrição"></textarea>
+                  <textarea id="textareaProfit" class="materialize-textarea" placeholder="Descrição"></textarea>
                   <div class="row"></div>
-                  <input type="date" class="datepicker" placeholder="Data do Recebimento">
+                  <textarea id= "valorProfit"  class="materialize-textarea" placeholder="Valor"></textarea>
                 </div>
               </div>
             </div>
             <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect btn-flat right">Fechar</a>
+              <a href="#!" class="modal-action modal-close waves-effect btn-flat left">Fechar</a>
+              <a href="#!" class="modal-action modal-close waves-effect btn-flat right" onclick="addProfit()">Adicionar</a>
             </div>
         </div>
         <!-- fim modal adicionar item -->
